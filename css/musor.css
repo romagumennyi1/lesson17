@@ -1,0 +1,113 @@
+
+.header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   padding: 20px 20px;
+   z-index: 40;
+}
+.header__container {
+   display: flex;
+   align-items: center;
+   
+}
+
+
+
+.page {
+   padding: 15px;
+}
+.page__container {
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: 0 auto;
+}
+.page__row {
+   display: flex;
+   margin: 0px -15px;
+   flex-wrap: wrap;
+   row-gap: 20px;
+
+}
+.page__colum {
+   flex: 0 1 33.333%;
+   padding: 0px 15px;
+}
+.page__item {}
+
+.item {}
+.item__image {
+margin-bottom: 15px;
+position: relative;
+background-color: aqua;
+/* ділимо висоту на ширину(по макету) */
+padding-bottom: 119%;
+}
+.item__image img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   /* object-fit: contain; */
+   /* object-position: bottom; */
+}
+.item__text {}
+
+@media (min-width:420px ){
+   .page__row {
+      display: flex;
+      margin: 0px -15px;
+      flex-wrap: wrap;
+      row-gap: 20px;
+   
+   }
+   .page__colum {
+      flex: 0 1 33.333%;
+      padding: 0px 15px;
+   }
+} 
+ 
+@media (max-width:580px ){
+.page__colum{
+   flex: 0 1 auto;
+}
+.page__colum:last-child{
+   flex: 0 1 auto;
+}
+} 
+
+
+
+
+
+[class*="__container"]{
+	max-width: 1170px;
+	margin: 0 auto;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+/* PC */
+/* @media (max-width:1200px ){
+   [class*="__container"]{
+      max-width: 970px;
+      
+   }
+   } */
+/* tablet */
+/* @media (max-width:991px ){
+   [class*="__container"]{
+      max-width: 750px;
+         
+   }
+   } */
+/* mobile */
+/* @media (max-width:768px ){
+      [class*="__container"]{
+         max-width: none; 
+            
+      }
+      }    */
